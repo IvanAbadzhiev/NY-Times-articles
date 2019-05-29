@@ -10,6 +10,8 @@ import {
   getArticlesPending
 } from "../../../reducers/articleReducer";
 
+import ArticleList from "../components/ArticleList";
+
 class Home extends Component {
   state = {
     articleLimit: 10
@@ -20,23 +22,18 @@ class Home extends Component {
     this.props.fetchArticles();
   }
 
-  loadMoreArticles = () => {
-    console.log("Load more articles");
-  };
-
-  goToArticle = articleId => {
-    this.props.history.push(`/article/${articleId}`);
-  };
-
   render() {
     const { articles, error, pending } = this.props;
-    console.log({ articles, error, pending });
-    // TODO show loading bar
+
+    if (error) {
+      return <h1>Something went wrong</h1>;
+    }
+    // TODO show loading bar and error
     if (pending) {
       return <h1>Articles loading</h1>;
     }
 
-    return <div>Home</div>;
+    return <ArticleList {...this.props} articles={articles} />;
   }
 }
 
