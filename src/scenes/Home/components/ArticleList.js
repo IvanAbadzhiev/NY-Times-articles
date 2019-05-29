@@ -7,7 +7,9 @@ class ArticleList extends Component {
   };
 
   render() {
-    return this.props.articles.map((article, index) => {
+    const { articles } = this.props;
+
+    return articles.map((article, index) => {
       // TODO: create component for article
       return (
         <div
