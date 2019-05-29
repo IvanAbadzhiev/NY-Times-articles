@@ -4,6 +4,8 @@ import { bindActionCreators } from "redux";
 
 import fetchArticlesAction from "../../../actions/fetchArticles";
 
+import PropTypes from "prop-types";
+
 import {
   getArticlesError,
   getArticles,
@@ -12,11 +14,7 @@ import {
 
 import ArticleList from "../components/ArticleList";
 
-class Home extends Component {
-  state = {
-    articleLimit: 10
-  };
-
+export class Home extends Component {
   componentDidMount() {
     // Fetch the articles from redux
     this.props.fetchArticles();
@@ -36,6 +34,12 @@ class Home extends Component {
     return <ArticleList {...this.props} articles={articles} />;
   }
 }
+
+Home.propTypes = {
+  articles: PropTypes.array,
+  pending: PropTypes.bool.isRequired,
+  error: PropTypes.string
+};
 
 const mapStateToProps = state => ({
   error: getArticlesError(state),

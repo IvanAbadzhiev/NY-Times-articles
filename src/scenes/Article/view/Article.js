@@ -22,7 +22,7 @@ export class Article extends Component {
 
     //TODO: Add spinner
     if (!article) {
-      return "The article is loading";
+      return <h1>The article is loading</h1>;
     }
 
     return (

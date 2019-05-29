@@ -4,7 +4,7 @@ import {
   fetchArticlesError
 } from "./index";
 
-// TODO: add in environment
+// TODO: add in environment variables
 const API_KEY = "ayPEsoWf0w58kNVt0qvnHvAXVcIpSTNU";
 
 function fetchArticles() {
