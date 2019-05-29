@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //Pages
 import Home from "./scenes/Home";
 import Article from "./scenes/Article";
-import NotFound from "./scenes/NotFound";
+import NotFound from "./scenes/NotFound/view/NotFound";
 
 export class App extends Component {
   render() {
