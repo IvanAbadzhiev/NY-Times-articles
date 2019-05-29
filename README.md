@@ -27,3 +27,11 @@ npm run test
 ```
 npm run coverage
 ```
+
+
+### TODO
+I did not have time to add everything that I want. 
+* PropTypes Everywhere
+* Environment variables for API_KEY and so on
+* Fetch article by id (But the api does not support this request)
+* Better UI (Css modules, Bootstrap UI)
