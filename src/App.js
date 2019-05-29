@@ -9,7 +9,7 @@ import rootReducer from "./reducers/reducers";
 
 //Pages
 import Home from "./scenes/Home/view/Home";
-import Article from "./scenes/Article";
+import Article from "./scenes/Article/view/Article";
 import NotFound from "./scenes/NotFound/view/NotFound";
 
 const middlewares = [thunk];
