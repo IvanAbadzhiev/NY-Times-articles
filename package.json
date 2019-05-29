@@ -1,25 +1,35 @@
 {
-  "name": "ny-times-articles",
-  "version": "0.1.0",
-  "private": true,
+  "name": "NY-Times-Articles",
+  "version": "1.0.0",
+  "private": false,
   "dependencies": {
+    "babel-jest": "^24.8.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
+    "react-test-renderer": "^16.8.6",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.1",
+    "redux-mock-store": "^1.5.3",
+    "sinon": "^7.3.2"
   },
   "browserslist": {
     "production": [
